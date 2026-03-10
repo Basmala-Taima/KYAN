@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyan</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Merriweather:ital,opsz,wdth,wght@0,18..144,105,300..900;1,18..144,105,300..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/output.css">
+</head>
+<body id="body" class="bg-amber-100 bg-[url(../images/خلفية2.png)]  bg-center bg-cover bg-no-repeat bg-fixed text-blue-950 transition-colors duration-200 min-h-screen">
+    <header id="header" class="w-full bg-amber-50/50 px-2 flex justify-between items-center sticky top-0 z-50">
+        <a href="#hero"> <!-- logo -->
+            <img src="images/logo.png" alt="شعار كيان" width="175px" height="175px">
+        </a>
+        <nav class="hidden lg:flex justify-evenly items-center gap-5"> <!--navbar-->
+            <a href="#hero" class="text-[20px] transition-all text-blue-900 font-semibold p-2 hover:bg-gray-400/35 hover:text-[22px] hover:rounded hover:border-b hover:border-b-blue-900 ">Home</a>
+            <a href="#treasure" class="text-[20px] transition-all text-blue-900 font-semibold p-2 hover:bg-gray-400/35 hover:text-[22px] hover:rounded hover:border-b hover:border-b-blue-900 ">Treasure</a>
+            <a href="heroesEN.html" class="text-[20px] transition-all text-blue-900 font-semibold p-2 hover:bg-gray-400/35 hover:text-[22px] hover:rounded hover:border-b hover:border-b-blue-900 ">Our Heroes</a>
+            <a href="#contact" class="text-[20px] transition-all text-blue-900 font-semibold p-2 hover:bg-gray-400/35 hover:text-[22px] hover:rounded hover:border-b hover:border-b-blue-900 ">Contact Us</a>
+        </nav>
+        <div class="flex gap-0.5"><!--تحويل اللغة و الاعدادات-->
+            <a href="index.html" class="hidden lg:block text-[26px] text-blue-900 font-semibold p-2 hover:text-blue-900/85" title="Convert To Arabic"><i class="fa-solid fa-globe"></i></a>
+            <button type="button" onclick="sitting()" class="lg:hidden hover:cursor-pointer p-2" title="Sitting"><i id="icon" class="fa-solid fa-bars py-0.5  text-[18px] text-blue-900  font-bold  hover:bg-gray-400/35 hover:border-2 transition-all hover:rounded hover:text-blue-900/80"></i></button> 
+        </div>
+        <aside id="sideBar" class="hidden overflow-auto max-h-full lg:hidden fixed end-0 top-12 lg:top-18.5 bg-amber-50 w-30 md:w-1/2 rounded rounded-e-0 border-4 border-e-0 flex-col justify-top  items-center lg:gap-3">
+            <i class="fa-solid fa-caret-up fixed end-4.5 lg:end-5 top-10 transition-all lg:top-16 text-[14px] lg:text-[22px]"></i> 
+            <a href="#hero"        class="w-full ps-2.5 text-[11px] md:text-[18px] lg:text-[26px] text-blue-900 font-semibold py-1 md:py-2 lg:py-3.5 hover:bg-gray-400/35 hover:text-[12px] md:hover:text-[20px] lg:hover:text-[27px] hover:rounded transition-all hover:border-b-2 hover:border-b-blue-900 ">🏠 Home</a> 
+            <a href="#treasure"    class="w-full ps-2.5 text-[11px] md:text-[18px] lg:text-[26px] text-blue-900 font-semibold py-1 md:py-2 lg:py-3.5 hover:bg-gray-400/35 hover:text-[12px] md:hover:text-[20px] lg:hover:text-[27px] hover:rounded transition-all hover:border-b-2 hover:border-b-blue-900 ">💎 Treasure</a>
+            <a href="heroesEN.html"      class="w-full ps-2.5 text-[11px] md:text-[18px] lg:text-[26px] text-blue-900 font-semibold py-1 md:py-2 lg:py-3.5 hover:bg-gray-400/35 hover:text-[12px] md:hover:text-[20px] lg:hover:text-[27px] hover:rounded transition-all hover:border-b-2 hover:border-b-blue-900 ">🦸🏻‍♂️🦸🏻‍♀️ Our Heroes</a>
+            <a href="#contact"     class="w-full ps-2.5 text-[11px] md:text-[18px] lg:text-[26px] text-blue-900 font-semibold py-1 md:py-2 lg:py-3.5 hover:bg-gray-400/35 hover:text-[12px] md:hover:text-[20px] lg:hover:text-[27px] hover:rounded transition-all hover:border-b-2 hover:border-b-blue-900 ">📧 Contact Us</a>  
+            <a href="index.html" class="w-full ps-2.5 text-[11px] md:text-[18px] lg:text-[26px] text-blue-900 font-semibold py-1 md:py-2 lg:py-3.5 hover:bg-gray-400/35 hover:text-[12px] md:hover:text-[20px] lg:hover:text-[27px] hover:rounded transition-all hover:border-b-2 hover:border-b-blue-900">🌐 Arabic</a>
+            
+        </aside>
+    </header> <!--navBar-->
+    <main>
+        <section id="hero" class="w-full bg-amber-50/60 lg:min-h-screen flex px-0.5 py-10 md:py-21.5 justify-center ">
+            <div class="w-full lg:w-[80%] flex flex-col lg:flex-row justify-between lg:justify-center items-center gap-3">
+                <div class="w-full flex flex-col gap-5 lg:gap-8 md:justify-center items-center lg:items-start">
+                    <h1 class="h1 text-center lg:text-start font-black text-[16px] md:text-[40px] lg:text-[55px]">KYAN.. Because strength begins from within.</h1>
+                    <p class="text-[10px] text-center lg:text-start md:text-[30px] lg:text-2xl text-blue-900 font-medium">Your safe space to be heard voice and psychological support that opens doors of hope. We walk together toward balance, believing you deserve peace and dignity.</p>
+                    <a href="#treasure" class="md:w-50 lg:w-65 border-2 border-orange-400 rounded-2xl px-2.5 md:py-1.5 text-blue-100 text-center font-bold text-[12px] md:text-[18px] lg:text-[26px] bg-orange-400/90 hover:bg-amber-500/90 transition-all">Start your journey</a>
+                </div>
+                <div class="w-full hidden lg:block">
+                    <img src="images/hero1.png" alt="Illustration of a diverse group of people with and without disabilities walking together joyfully, symbolizing inclusion and unity in blue and orange tones." class="rounded">
+                </div>
+            </div>
+        </section>
+        <section id="treasure" class="w-full lg:min-h-screen flex px-0.5 pt-16 lg:pt-14 pb-7.5 justify-center">
+            <div class="w-full lg:w-[80%] flex flex-col justify-center items-center gap-5">
+                <div class="w-full flex flex-col justify-center items-center gap-3 mb-2.5">
+                    <h2 class="h1 text-center font-black text-[15px] md:text-[30px] lg:text-[45px]">KYAN Treasures..Where Every Card Holds Meaning</h2>
+                    <p class="text-[8px] text-center md:text-[16px] lg:text-[22px] text-blue-900 font-medium">At KYAN, you will find inspiring stories of heroes proving that will is stronger than any challenge, psychological support tools to build inner peace, and practical exercises to enhance mental strength. This space is designed to be simple and accessible to everyone—combining inspiration, support, and an interactive experience all in one place.</p>
+                </div>
+                <div class="w-full flex flex-col lg:flex-row justify-between lg:justify-center items-center gap-3">
+                    <div class="w-[30%] lg:w-[33%] flex flex-col justify-center items-center gap-4">
+                        <div class="w-full h-25 md:h-35 lg:h-65 transform hover:-translate-y-1  border-2 border-amber-100 outline-1 outline-amber-50 bg-amber-50 rounded relative transition-all">
+                            <div class="w-full h-3/5 bg-[url(../images/card3.jpeg)] bg-center bg-cover bg-no-repeat"></div>
+                            <div class="w-full h-full bg-gray-400/50 absolute top-0 start-0 opacity-0 hover:opacity-50"></div>
+                            <h3 class="text-center font-black text-[25px] lg:text-[30px]">Stories of Hope</h3>
+                            <p class="text-[8px] md:text-[7px] lg:text-[14px] text-center text-gray-400 font-medium">Inspiring journeys of heroes proving that will is stronger than any challenge.</p>
+                        </div>
+                        <a href="heroesEN.html" class=" border lg:border-2 border-orange-400/75 rounded-2xl transform hover:-translate-y-0.5 px-2.5 md:py-1.5 text-blue-50 text-center font-bold text-[8px] md:text-[10px] lg:text-[18px] bg-orange-400/75 hover:bg-amber-500/75 transition-all">Explore Our Treasures 🔓</a>
+                    </div>
+                    <div class="w-[30%] lg:w-[33%] flex flex-col justify-center items-center gap-4">
+                        <div class="w-full h-25 md:h-35 lg:h-65 transform hover:-translate-y-1  border-2 border-amber-100 outline-1 outline-amber-50 bg-amber-50 rounded relative transition-all">
+                            <div class="w-full h-3/5 bg-[url(../images/card2.jpg)] bg-center bg-cover bg-no-repeat"></div>
+                            <div class="w-full h-full bg-gray-400/50 absolute top-0 start-0 opacity-0 hover:opacity-50"></div>
+                            <h3 class="text-center font-black text-[25px] lg:text-[30px]">Tranquility Tools</h3>
+                            <p class="text-[8px] md:text-[7px] lg:text-[14px] text-center text-gray-400 font-medium">Psychological support resources designed to build lasting inner peace.</p>
+                        </div>
+                        <button disabled class="w-1/2 border lg:border-2 border-gray-100 rounded-2xl px-2.5 md:py-1.5 text-blue-50 text-center font-bold text-[8px] md:text-[10px] lg:text-[18px] bg-orange-400 hover:bg-gray-400 cursor-not-allowed opacity-70">Coming Soon..🔒</button>
+                    </div>
+                    <div class="w-[30%] lg:w-[33%] flex flex-col justify-center items-center gap-4">
+                        <div class="w-full h-25 md:h-35 lg:h-65 transform hover:-translate-y-1  border-2 border-amber-100 outline-1 outline-amber-50 bg-amber-50 rounded relative transition-all">
+                            <div class="w-full h-3/5 bg-[url(../images/card1.jpg)] bg-center bg-cover bg-no-repead"></div>
+                            <div class="w-full h-full bg-gray-400/50 absolute top-0 start-0 opacity-0 hover:opacity-50"></div>
+                            <h3 class="text-center font-black text-[25px] lg:text-[30px]">Steps to Strength</h3>
+                            <p class="text-[8px] md:text-[7px] lg:text-[14px] text-center text-gray-400 font-medium">Practical, interactive exercises to enhance mental and physical well-being.</p>
+                        </div>
+                        <button disabled class="w-1/2 border lg:border-2 border-gray-100 rounded-2xl px-2.5 md:py-1.5 text-blue-50 text-center font-bold text-[8px] md:text-[10px] lg:text-[18px] bg-orange-400 hover:bg-gray-400 cursor-not-allowed opacity-70">Coming Soon..🔒</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <section id="contact" class="w-full bg-slate-100/50 lg:min-h-screen flex px-0.5 py-20 justify-center">
+            <div class="w-full lg:w-[80%] flex flex-col justify-center items-center gap-3">
+                <div class="w-full flex flex-col gap-5 justify-center items-center">
+                    <h2 class="text-center font-black text-[16px] md:text-[40px] lg:text-[54px]">Your Safe Haven.. A Letter to Your Heart</h2>
+                    <p class="text-[10px] text-center md:text-[18px] lg:text-[26px] text-blue-900 font-medium">Sometimes, words are the only refuge. Here, you can express your feelings, note your fears, or celebrate your small wins. Your words belong to you, kept privately on your device.</p>
+                </div>
+                <div class="w-full flex flex-col lg:flex-row mt-15 gap-5 justify-center lg:justify-between items-center">
+                    <form  id="form" class="w-full lg:w-1/2 flex flex-col justify-center items-center gap-3">
+                        <input type="text" class="w-full bg-slate-50 p-3 border-2 border-slate-300/70 rounded" id="title" name="title" placeholder="What would you name this moment?">
+                        <textarea name="message" id="message" rows="10" class="w-full bg-slate-50 p-3 border-2 border-slate-300/70 rounded " placeholder="How are you feeling right now? 
+Start writing as if you're talking to your best friend.."></textarea>
+                        <button type="submit" id="submit" class="w-3/4  cursor-pointer border lg:border-2 border-orange-400/75 rounded-2xl transform hover:-translate-y-0.5 px-2.5 md:py-1.5 text-blue-50 text-center font-bold text-[8px] md:text-[10px] lg:text-[18px] bg-orange-400/75 hover:bg-amber-500/75 transition-all">Save to My Diary✨</button>
+                    </form>
+                    <div id="con-message" class="w-full flex flex-col justify-center items-center gap-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full h-30 text-amber-50 bg-slate-900 flex flex-col justify-center items-center gap-2">
+        <h6>Made with love to be your companion in the journey of peace.</h6>
+        <p>Copyright &copy; 2026 KYAN. All rights reserved.</p>
+    </footer>
+    <script src="JS/main.js"></script>
+</body>
+</html>
