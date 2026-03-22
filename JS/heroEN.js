@@ -84,3 +84,18 @@ boxContainer.addEventListener("click",function(event){
         boxContainer.classList.add("hidden");
     };
 });
+
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 150) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+});
