@@ -1,3 +1,22 @@
+/* --- CSS Variables (Root Colors) --- */
+:root {
+    --primary-blue: #1a237e;
+    --accent-orange: #ffa726;
+    --accent-orange-dark: #fb8c00;
+    --text-dark: #1a237e;
+    --text-muted: #666666;
+    --text-light: #999999;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --shadow-soft: rgba(0, 0, 0, 0.05);
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+}
+/* --- Global Styles --- */
+html { 
+    scroll-behavior: smooth; 
+}
+/* --- Strength Section --- */
 .strength-section {
     padding: 30px 20px 0;
     text-align: center;
@@ -8,31 +27,32 @@
     justify-content: center;
 }
 .strength-title {
-    color: #1a237e;
+    color: var(--primary-blue);
     font-size: 2.5rem;
     margin-bottom: 30px;
     font-weight: bold;
 }
-.strength-section p{
-    color: #666;
+.strength-section p {
+    color: var(--text-muted);
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
+/* --- Steps & Cards --- */
 .steps {
     gap: 25px;
     max-width: 1100px;
     margin: 20px auto 0;
 }
 .step-card {
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--glass-border);
     padding: 40px 20px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px var(--shadow-soft);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,58 +67,18 @@
     margin-bottom: 20px;
 }
 .step-card h3 {
-    color: #1a237e;
+    color: var(--text-dark);
     font-size: 1.5rem;
     margin: 10px 0;
 }
 .step-card p {
-    color: #666;
+    color: var(--text-muted);
     font-size: 1rem;
 }
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-}
-.modal-content {
-    background: white;
-    padding: 40px;
-    border-radius: 30px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #999;
-    border: none;
-    background: none;
-}
-.action-btn {
-    background: #ffa726;
-    color: white;
-    border: none;
-    padding: 12px 35px;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 25px;
-    font-family: inherit;
-}
+/* --- Floating Action Trigger --- */
 .floating-trigger {
     position: fixed;
-    bottom:-15%;
+    bottom: -15%;
     left: 75%; 
     transform: translate(-50% ,15%);
     z-index: 1000;
@@ -109,12 +89,12 @@
 .main-fab {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #ffa726, #fb8c00);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-dark));
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     font-size: 1.5rem;
     box-shadow: 0 10px 25px rgba(255, 167, 38, 0.4);
     animation: floatingPulse 3s infinite ease-in-out;
@@ -122,7 +102,7 @@
 }
 .tooltip-text {
     background: rgba(26, 35, 126, 0.9);
-    color: white;
+    color: var(--white);
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -146,14 +126,57 @@
     transform: rotate(360deg) scale(1.2);
     animation: none; 
 }
+/* --- Modal Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--modal-overlay);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-light);
+    border: none;
+    background: none;
+}
+.action-btn {
+    background: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    font-family: inherit;
+}
+/* --- Back to Top --- */
 .back-to-top {
     position: fixed;
     bottom: 30px;
     left: 30px;
     width: 50px;
     height: 50px;
-    background-color: #fb8c00;
-    color: white;
+    background-color: var(--accent-orange-dark);
+    color: var(--white);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -174,9 +197,10 @@
     transform: translateY(0);
 }
 .back-to-top:hover {
-    background-color: #1a237e;
+    background-color: var(--primary-blue);
     transform: scale(1.1);
 }
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 20px;

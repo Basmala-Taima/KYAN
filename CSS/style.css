@@ -1,52 +1,71 @@
+/* --- CSS Variables (Centralized Colors) --- */
+:root {
+    --bg-creamy: #fdfaf5;
+    --primary-mint: #a8d5ba;
+    --primary-mint-hover: #96c7a8;
+    --accent-teal: #84a59d;
+    --text-main: #4a4e69;
+    --text-muted: #7f8c8d;
+    --white: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+/* --- Global Styles --- */
+html { scroll-behavior: smooth; }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdfaf5;
-    color: #4a4e69;
+    background-color: var(--bg-creamy);
+    color: var(--text-main);
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
 }
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #84a59d;
-    margin: 10px 0;
-}
-.manifesto {
-    font-style: italic;
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
 #tranquilityHarbors {
     margin: 40px 0;
     text-align: center;
 }
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-teal);
+    margin: 10px 0;
+}
+.subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
 .reset-btn {
-    background-color: #a8d5ba;
+    background-color: var(--primary-mint);
     border: none;
-    margin:20px 0;
+    margin: 20px 0;
     padding: 20px 40px;
     border-radius: 50px;
-    color: white;
+    color: var(--white);
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(168, 213, 186, 0.4);
     transition: transform 0.3s, background 0.3s;
 }
+.breathing-anchor {
+    margin: 20px 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
 .reset-btn:hover {
     transform: scale(1.05);
-    background-color: #96c7a8;
+    background-color: var(--primary-mint-hover);
 }
 #timer-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle, #fdfaf5 0%, #e8f3ed 100%);
+    background: radial-gradient(circle, var(--bg-creamy) 0%, #e8f3ed 100%);
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
@@ -55,13 +74,13 @@ h1 {
 }
 .breathe-circle {
     width: 150px;
-    height:150px;
-    background-color: #a8d5ba;
+    height: 150px;
+    background-color: var(--primary-mint);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     font-size: 3rem;
     animation: pulse 4s infinite ease-in-out;
 }
@@ -69,20 +88,20 @@ h1 {
     0%, 100% { transform: scale(1); opacity: 0.8; }
     50% { transform: scale(1.4); opacity: 0.5; }
 }
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     width: 90%;
     max-width: 1000px;
     margin-bottom: 50px;
-    padding:20px 0 ;
+    padding: 20px 0;
 }
-.card{
-    background: #ffffff;
+.card {
+    background: var(--white);
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 35px var(--shadow-light);
     text-align: center;
     border: 1px solid #f0f0f0;
 }
@@ -94,7 +113,7 @@ h1 {
 }
 .sound-btn {
     background: #f8f9fa;
-    border: 2px solid #a8d5ba;
+    border: 2px solid var(--primary-mint);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -102,13 +121,15 @@ h1 {
     font-size: 1.5rem;
     transition: 0.3s;
 }
-.sound-btn:hover { background: #a8d5ba; }
+sound-btn:hover, .active { 
+    background: var(--primary-mint); 
+}
 .ai-card {
     cursor: pointer;
     perspective: 1000px;
 }
 .ai-card-inner {
-    background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%); 
+    background: linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 40px 20px;
@@ -127,15 +148,9 @@ h1 {
 .quote-text {
     font-weight: bold;
     transition: opacity 0.5s ease;
-    color: #84a59d;
+    color: var(--accent-teal);
 }
-.breathing-anchor {
-    margin: 20px 0;
-    color: #7f8c8d;
-    font-size: 0.95rem;
-    line-height: 1.8;
-}
-
+/* --- Back to Top --- */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -143,7 +158,7 @@ h1 {
     width: 50px;
     height: 50px;
     background-color: #fb8c00;
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -167,6 +182,7 @@ h1 {
     background-color: #1a237e;
     transform: scale(1.1);
 }
+/* --- Responsive Layout --- */
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 20px;

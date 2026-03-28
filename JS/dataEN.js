@@ -1,3 +1,4 @@
+//Static data for inspirational quotes and daily exercises categorized by type.
 const quotes = [
     "Your strength lies not in your body, but in your unbeatable soul.",
     "The only true disability is a spirit without ambition.",

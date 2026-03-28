@@ -18,7 +18,7 @@
             <img src="images/logo.png" alt="Logo Kyan" width="200px" height="200px">
         </a>
         <nav class="hidden lg:flex justify-evenly items-center gap-5"> <!--navbar-->
-            <a href="steps.html" class="hidden lg:block text-[35px] text-blue-900 font-semibold p-2 hover:text-blue-900/85" title="Convert To Arabic"><i class="fa-solid fa-globe"></i></a>
+            <a href="steps.html" class="text-[35px] text-blue-900 font-semibold p-2 hover:text-blue-900/85" title="Convert To Arabic"><i class="fa-solid fa-globe"></i></a>
             <a href="enIndex.html" class="text-[35px] transition-all text-blue-900 font-semibold p-2 hover:bg-gray-400/35  hover:rounded hover:text-blue-900/85 hover:border-blue-900 "><i class="fa-solid fa-house"></i></a>
         </nav>
     </header> <!--navBar-->
@@ -28,37 +28,34 @@
                 <h2 class="strength-title">Strength Steps</h2>
                 <p>Click on any exercise category for a new random idea</p>
             </div>
-
             <div class="steps flex flex-col lg:flex-row">
                 <div class="step-card" onclick="openExercise('spirit')">
                     <div class="step-icon">🌱</div>
                     <h3>Spiritual Strength</h3>
                     <p>For gratitude and peace</p>
                     <button class="action-btn">Click Here</button>
-                </div>
-
+                </div><!--steps-card-->
                 <div class="step-card" onclick="openExercise('body')">
                     <div class="step-icon">🧘</div>
                     <h3>Physical Strength</h3>
                     <p>For body relaxation</p>
                     <button class="action-btn">Click Here</button>
-                </div>
-
+                </div><!--steps-card-->
                 <div class="step-card" onclick="openExercise('mind')">
                     <div class="step-icon">🧠</div>
                     <h3>Mental Strength</h3>
                     <p>For clarity and focus</p>
                     <button class="action-btn">Click Here</button>
-                </div>
-            </div>
-        </section>
+                </div><!--steps-card-->
+            </div><!--steps-->
+        </section><!--strength-section-->
         <div id="exerciseModal" class="modal">
             <div class="modal-content">
                 <button class="close-btn" onclick="closeModal()">&times;</button>
                 <div id="modalBody"></div>
                 <button class="action-btn" onclick="closeModal()">Done, I feel better</button>
             </div>
-        </div>
+        </div><!--exerciseModal-->
     </main>
     <button id="backToTop" class="back-to-top" title="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
     <footer class="w-full h-30 text-amber-50 bg-slate-900 flex flex-col justify-center items-center gap-2">

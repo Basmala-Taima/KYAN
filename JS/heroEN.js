@@ -1,7 +1,9 @@
+// DOM Elements and Global Variables
 const boxContainer=document.getElementById("boxContainer")
-let boxItem=document.getElementById("boxItem");
-let allButton=document.querySelectorAll(".readStory")
+const boxItem=document.getElementById("boxItem");
+const allButton=document.querySelectorAll(".readStory")
 let currentIndex=0
+// Array containing biographical data and descriptions for the heroes.
 heroes=[
     {
         name: "Ibrahim Hamadtou",
@@ -46,6 +48,7 @@ heroes=[
         description3: "Fatma teaches us that strength is about patience and determination. She is a great example of how you can reach the stars if you never give up."
     }
 ]
+// Dynamically generates and displays the hero's story in the modal based on the selected index.
 function showStory(index) {
     boxItem.innerHTML=`` 
     let story=`
@@ -54,7 +57,7 @@ function showStory(index) {
         </button>
         <div class="flex flex-col md:flex-row items-center gap-10 w-full">
             <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-xl overflow-hidden">
-                <img src="images/${heroes[index].img}" alt="بطل" class="w-full h-full object-cover">
+                <img src="images/${heroes[index].img}" alt="${heroes[index].name}" class="w-full h-full object-cover">
             </div>
             <div class="text-center md:text-start flex-1">
                 <h3 class="text-3xl md:text-5xl font-black text-blue-900 mb-6">${heroes[index].name}</h3>
@@ -66,6 +69,7 @@ function showStory(index) {
     `
     boxItem.innerHTML=story
 }
+// Attaches click events to all "Read Story" buttons to open the modal with the correct content.
 allButton.forEach((button,index)=>{
     button.addEventListener("click",function(e){
         boxContainer.classList.remove("hidden");
@@ -74,17 +78,18 @@ allButton.forEach((button,index)=>{
         showStory(currentIndex);
     });
 });
+// Closes the story modal by hiding the container
 function btnBack(){
     boxContainer.classList.remove("flex");
     boxContainer.classList.add("hidden");
 }
+//Closes the modal if the user clicks on the background overlay.
 boxContainer.addEventListener("click",function(event){
     if (event.target===boxContainer) {
-        boxContainer.classList.remove("flex");
-        boxContainer.classList.add("hidden");
+        btnBack()
     };
 });
-
+//Monitors page scrolling to show or hide the "Back to Top" button.
 const backToTopBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 150) {
@@ -93,6 +98,7 @@ window.addEventListener('scroll', () => {
         backToTopBtn.classList.remove('show');
     }
 });
+// Scrolls the page smoothly back to the top when the button is clicked.
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
