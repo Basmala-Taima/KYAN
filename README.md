@@ -5,6 +5,22 @@
 
 A psychological support and empowerment platform designed to be a safe, inspiring space for everyone.
 
+
+---
+
+##  نبذة عن كيان : 
+
+<img width="1920" height="935" alt="image" src="https://github.com/user-attachments/assets/a47ea82a-00ce-4d4a-9078-bc82fd0699c0" />
+
+---
+
+<img width="1920" height="937" alt="image" src="https://github.com/user-attachments/assets/06d8df85-8c9b-48cf-8872-ddaa46e7f7a9" />
+
+---
+
+<img width="1920" height="929" alt="image" src="https://github.com/user-attachments/assets/066f1b19-ff8f-41dc-9cf9-ba1c34f58268" />
+
+
 ---
 ### 🔗 [Live Demo | تجربة الموقع من هنا](https://basmala-taima.github.io/KYAN/)
 ---
